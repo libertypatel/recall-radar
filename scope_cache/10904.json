@@ -1,0 +1,59 @@
+{
+  "affected_models": [
+    {
+      "value": "BYL001",
+      "quote": "Product Model: BYL001",
+      "supported": true
+    }
+  ],
+  "dates": [
+    {
+      "type": "sold",
+      "as_written": "Online at Amazon.com from January 2026 through May 2026",
+      "quote": "Online at Amazon.com from January 2026 through May 2026",
+      "supported": true
+    }
+  ],
+  "identification": [
+    {
+      "instruction": "The tri-fold aftermarket play yard mattresses are white with a neutral-colored letter or balloon print and measure about 38 inches by 26 inches by 3 inches.",
+      "quote": "The tri-fold aftermarket play yard mattresses are white with a neutral-colored letter or balloon print and measure about 38 inches by 26 inches by 3 inches.",
+      "supported": true
+    },
+    {
+      "instruction": "The full-sized crib mattresses are white with an aquamarine band and a zipper along the sides, and measure about 25 inches by 27 inches by 5.5 inches.",
+      "quote": "The full-sized crib mattresses are white with an aquamarine band and a zipper along the sides, and measure about 25 inches by 27 inches by 5.5 inches.",
+      "supported": true
+    },
+    {
+      "instruction": "\"Product Model: BYL001\" is printed on a label inside the mattress cover.",
+      "quote": "\"Product Model: BYL001\" is printed on a label inside the mattress cover.",
+      "supported": true
+    },
+    {
+      "instruction": "\"voomf\" is printed on a label on the side of the mattress.",
+      "quote": "\"voomf\" is printed on a label on the side of the mattress.",
+      "supported": true
+    }
+  ],
+  "remedy": [
+    {
+      "text": "Consumers should stop using the mattresses immediately and contact Voomf for a full refund.",
+      "quote": "Consumers should stop using the mattresses immediately and contact Voomf for a full refund.",
+      "supported": true
+    },
+    {
+      "text": "Consumers will be asked to destroy the mattresses by writing in permanent marker \"Recalled,\" cutting the play yard mattress in half and cutting the full-sized mattress cover diagonally across the entire mattress using scissors, and to send a photo of the destroyed mattress to voomfrecall@outlook.com.",
+      "quote": "Consumers will be asked to destroy the mattresses by writing in permanent marker \"Recalled,\" cutting the play yard mattress in half and cutting the full-sized mattress cover diagonally across the entire mattress using scissors, and to send a photo of the destroyed mattress to voomfrecall@outlook.com.",
+      "supported": true
+    },
+    {
+      "text": "Consumers should then dispose of the recalled product in accordance with local and/or state disposal procedures.",
+      "quote": "Consumers should then dispose of the recalled product in accordance with local and/or state disposal procedures.",
+      "supported": true
+    }
+  ],
+  "recall_id": 10904,
+  "title": "Play Yard and Crib Mattresses Recalled Due to Risk of Serious Injury or Death from Entrapment and Fire Hazards; Violate Mandatory Standards for Mattresses; Sold on Amazon by Voomf",
+  "url": "https://www.cpsc.gov/Recalls/2026/Play-Yard-and-Crib-Mattresses-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Entrapment-and-Fire-Hazards-Violate-Mandatory-Standards-for-Mattresses-Sold-on-Amazon-by-Voomf"
+}
