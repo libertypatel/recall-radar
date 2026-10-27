@@ -1,3 +1,4 @@
+from matcher import clean_model
 from extract import extract_listing
 from search import search_recalls, SourceUnavailable
 from scope import extract_scope
@@ -44,6 +45,30 @@ def check_details(details):
         results.append(outcome)
     return {"details": details, "summary": summarize(results), "results": results}
 
+FIELDS = ["brand", "product_type", "model_number", "manufacture_date"]
+
+
+def same_value(field, a, b):
+    """Compare two values loosely: model numbers ignore dashes/spaces/case, others ignore case."""
+    if field == "model_number":
+        return clean_model(a) == clean_model(b)
+    return str(a).strip().lower() == str(b).strip().lower()
+
+
+def merge_details(details, reply_details):
+    """Fill missing fields from the seller's reply. Never overwrite a conflicting value; report it instead."""
+    merged = dict(details)
+    conflicts = []
+    for field in FIELDS:
+        new = reply_details.get(field)
+        old = details.get(field)
+        if not new:
+            continue
+        if not old:
+            merged[field] = new
+        elif not same_value(field, old, new):
+            conflicts.append({"field": field, "listing": old, "reply": new})
+    return merged, conflicts
 
 def check_listing(listing_text):
     """Full check starting from pasted listing text."""
