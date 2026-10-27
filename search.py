@@ -1,3 +1,7 @@
+import os
+import json
+import time
+import hashlib
 import requests
 
 CPSC_URL = "https://www.saferproducts.gov/RestWebServices/Recall"
@@ -5,16 +9,55 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
     "Accept": "application/json",
 }
+SEARCH_CACHE_DIR = "search_cache"
+CACHE_HOURS = 24
 
+
+class SourceUnavailable(Exception):
+    """Raised when CPSC can't be reached, so callers never mistake a failure for 'no recalls'."""
+
+def is_error_response(data):
+    """CPSC sometimes sends its own errors disguised as a recall with RecallID 0. Detect that."""
+    if not isinstance(data, list):
+        return True
+    for record in data:
+        title = str(record.get("Title") or "")
+        if record.get("RecallID") == 0 or title.startswith("Error retrieving"):
+            return True
+    return False
 
 def cpsc_query(**params):
-    """Run one CPSC search and return the list of recalls (empty list on failure)."""
+    """Run one CPSC search with a 24-hour cache and up to 3 attempts."""
     params["format"] = "json"
-    response = requests.get(CPSC_URL, params=params, headers=HEADERS, timeout=30)
-    if response.status_code != 200:
-        print("CPSC search failed:", response.status_code)
-        return []
-    return response.json()
+    key = "&".join(f"{k}={v}" for k, v in sorted(params.items()))
+    path = os.path.join(SEARCH_CACHE_DIR, hashlib.md5(key.encode()).hexdigest() + ".json")
+
+    # Use a recent cached answer if we have one
+    if os.path.exists(path) and time.time() - os.path.getmtime(path) < CACHE_HOURS * 3600:
+        with open(path) as f:
+            return json.load(f)
+
+    last_error = None
+    for attempt in range(3):
+        try:
+            response = requests.get(CPSC_URL, params=params, headers=HEADERS, timeout=60)
+            if response.status_code == 200:
+                data = response.json()
+                if is_error_response(data):
+                    last_error = "CPSC returned an internal error"
+                else:
+                    print(f"CPSC {key}: {len(data)} results")  # temporary, to watch what CPSC returns
+                    os.makedirs(SEARCH_CACHE_DIR, exist_ok=True)
+                    with open(path, "w") as f:
+                        json.dump(data, f)
+                    return data
+            else:
+                last_error = f"status {response.status_code}"
+        except (requests.RequestException, ValueError) as error:
+            last_error = str(error)
+        time.sleep(2 * (attempt + 1))  # wait 2s, then 4s, before trying again
+
+    raise SourceUnavailable(f"CPSC could not be reached ({last_error})")
 
 
 def recall_text(recall):
@@ -30,7 +73,6 @@ def search_recalls(details, max_results=5):
     brand = details.get("brand")
     product_type = details.get("product_type")
 
-    # Collect results from both searches, keyed by RecallID so nothing is counted twice
     found = {}
     if brand:
         for recall in cpsc_query(Title=brand):
@@ -39,7 +81,6 @@ def search_recalls(details, max_results=5):
         for recall in cpsc_query(ProductName=product_type):
             found[recall["RecallID"]] = recall
 
-    # Score each recall: brand match counts most, then each product word that appears
     scored = []
     for recall in found.values():
         text = recall_text(recall)
@@ -57,9 +98,7 @@ def search_recalls(details, max_results=5):
 
 
 if __name__ == "__main__":
-    details = {"brand": "Voomf", "product_type": "crib mattress"}
-    candidates = search_recalls(details)
+    candidates = search_recalls({"brand": "Voomf", "product_type": "crib mattress"})
     print("Candidates found:", len(candidates))
     for recall in candidates:
-        print("\n-", recall.get("Title"))
-        print(" ", recall.get("URL"))
+        print("-", recall.get("Title"))
