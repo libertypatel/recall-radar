@@ -118,19 +118,6 @@ def search_snapshot(details, max_results=5):
     return rank(found, details, max_results), snapshot["saved_on"]
 
 
-def search_recalls(details, max_results=5):
-    """Try live CPSC first, then fall back to the saved copy. Returns (candidates, source note)."""
-    try:
-        return search_live(details, max_results), "Live CPSC recall database"
-    except SourceUnavailable:
-        if not os.path.exists(SNAPSHOT_PATH):
-            raise
-        candidates, saved_on = search_snapshot(details, max_results)
-        note = (f"Live CPSC search was unavailable, so this check used a saved copy of "
-                f"CPSC recalls from 2020 onward, saved on {saved_on}.")
-        return candidates, note
-
-
 if __name__ == "__main__":
     candidates, source = search_recalls({"brand": "Voomf", "product_type": "crib mattress"})
     print("Source:", source)
