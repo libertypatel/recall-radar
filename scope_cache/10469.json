@@ -1,0 +1,44 @@
+{
+  "affected_models": [
+    {
+      "value": "XCD-001",
+      "quote": "models XCD-001 and XCD-002",
+      "supported": true
+    },
+    {
+      "value": "XCD-002",
+      "quote": "models XCD-001 and XCD-002",
+      "supported": true
+    },
+    {
+      "value": "MNCL-001",
+      "quote": "model MNCL-001",
+      "supported": true
+    }
+  ],
+  "dates": [
+    {
+      "type": "sold",
+      "as_written": "May 2023 through September 2025",
+      "quote": "May 2023 through September 2025",
+      "supported": true
+    }
+  ],
+  "identification": [
+    {
+      "instruction": "'Criblike' and the model number are printed on labels located on the end of the product.",
+      "quote": "'Criblike' and the model number are printed on labels located on the end of the product.",
+      "supported": true
+    }
+  ],
+  "remedy": [
+    {
+      "text": "Consumers should immediately stop using the crib mattresses and contact Criblike for instructions on requesting a full refund. Consumers should destroy the mattresses by cutting them in half, take a photo of the destroyed mattress and email the photo to Criblike-service_2025@outlook.com with 'Recall Proof' and your name in the subject line.",
+      "quote": "Consumers should immediately stop using the crib mattresses and contact Criblike for instructions on requesting a full refund. Consumers should destroy the mattresses by cutting them in half, take a photo of the destroyed mattress and email the photo to Criblike-service_2025@outlook.com with 'Recall Proof' and your name in the subject line.",
+      "supported": true
+    }
+  ],
+  "recall_id": 10469,
+  "title": "F&F Fine Wines Recalls Kirkland Signature Valdobbiadene Prosecco Entrapment or Suffocation; Violates Mandatory Standards for Mattresses; Sold on Amazon by Mengna Criblike Mattresses Recalled Due to Risk of Serious Injury or Death from Entrapment",
+  "url": "https://www.cpsc.gov/Recalls/2026/Criblike-Mattresses-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Entrapment-or-Suffocation-Violates-Mandatory-Standards-for-Mattresses-Sold-on-Amazon-by-Mengna"
+}

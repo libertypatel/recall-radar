@@ -23,7 +23,7 @@ def summarize(results):
 def check_details(details):
     """Run search, scope, and matching for already-extracted details."""
     try:
-        candidates = search_recalls(details)
+        candidates, source = search_recalls(details)
     except SourceUnavailable as error:
         return {
             "details": details,
@@ -43,7 +43,7 @@ def check_details(details):
             question_sets += 1
         outcome["scope"] = scope
         results.append(outcome)
-    return {"details": details, "summary": summarize(results), "results": results}
+    return {"details": details, "summary": summarize(results), "results": results, "source": source}
 
 FIELDS = ["brand", "product_type", "model_number", "manufacture_date"]
 

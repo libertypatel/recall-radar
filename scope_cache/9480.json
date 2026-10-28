@@ -1,0 +1,34 @@
+{
+  "affected_models": [
+    {
+      "value": "304-903",
+      "quote": "The crib's model number is 304-903",
+      "supported": true
+    }
+  ],
+  "dates": [
+    {
+      "type": "sold",
+      "as_written": "from September 2021 through October 2022",
+      "quote": "from September 2021 through October 2022",
+      "supported": true
+    }
+  ],
+  "identification": [
+    {
+      "instruction": "Look for dark brown wash finish, gold-capped feet, and model number 304-903 on the mattress support board.",
+      "quote": "The cribs have a dark brown wash finish and gold-capped feet. The crib's model number is 304-903 and is located on the mattress support board.",
+      "supported": true
+    }
+  ],
+  "remedy": [
+    {
+      "text": "Consumers should immediately stop using the recalled cribs and contact Crate and Barrel for a full refund or free replacement. Crate and Barrel is contacting all purchasers directly.",
+      "quote": "Consumers should immediately stop using the recalled cribs and contact Crate and Barrel for a full refund or free replacement. Crate and Barrel is contacting all purchasers directly.",
+      "supported": true
+    }
+  ],
+  "recall_id": 9480,
+  "title": "Crate And Barrel Recalls Thornhill Baby Cribs Due to Fall and Entrapment Hazards (Recall Alert)",
+  "url": "https://www.cpsc.gov/Recalls/2023/Crate-And-Barrel-Recalls-Thornhill-Baby-Cribs-Due-to-Fall-and-Entrapment-Hazards-Recall-Alert"
+}

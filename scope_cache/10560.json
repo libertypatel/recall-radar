@@ -1,0 +1,44 @@
+{
+  "affected_models": [
+    {
+      "value": "XX-BM-01",
+      "quote": "\"XX-BM-01\"",
+      "supported": true
+    }
+  ],
+  "dates": [
+    {
+      "type": "sold",
+      "as_written": "August 2024 through July 2025",
+      "quote": "from August 2024 through July 2025",
+      "supported": true
+    }
+  ],
+  "identification": [
+    {
+      "instruction": "Check if the mattress is white and measures about 38 inches by 24 inches.",
+      "quote": "KEAWIS crib mattresses were sold in white and measure about 38 inches by 24 inches.",
+      "supported": true
+    },
+    {
+      "instruction": "Look for model number XX-BM-01 printed on a label sewn on the side of the mattress.",
+      "quote": "Model number \"XX-BM-01\" is printed on a label sewn on the side of the mattress.",
+      "supported": true
+    }
+  ],
+  "remedy": [
+    {
+      "text": "Stop using the crib mattresses immediately and contact Yixing Trading for a full refund.",
+      "quote": "Consumers should stop using the crib mattresses immediately and contact Yixing Trading for a full refund.",
+      "supported": true
+    },
+    {
+      "text": "Cut a large 'X' across the main surface of the mattress, write the consumer's name and date directly on the mattress surface, take a photo and email the photo of the destroyed mattress to Yixing Trading at support@keawis.com to receive a full refund.",
+      "quote": "Consumers should cut a large \"X\" across the main surface of the mattress, write the consumer's name and date directly on the mattress surface, take a photo and email the photo of the destroyed mattress to Yixing Trading at support@keawis.com to receive a full refund.",
+      "supported": true
+    }
+  ],
+  "recall_id": 10560,
+  "title": "Yixing Trading Recalls KEAWIS Crib Mattresses Due to Risk of Serious Injury or Death from Entrapment and Suffocation; Violates Mandatory Standard for Crib Mattresses",
+  "url": "https://www.cpsc.gov/Recalls/2026/Yixing-Trading-Recalls-KEAWIS-Crib-Mattresses-Due-to-Risk-of-Serious-Injury-or-Death-from-Entrapment-and-Suffocation-Violates-Mandatory-Standard-for-Crib-Mattresses"
+}

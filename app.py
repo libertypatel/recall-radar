@@ -20,6 +20,7 @@ def show_report(report):
 
     st.subheader(report["summary"])
     st.caption("Results describe recall evidence only, never general product safety.")
+    st.caption("Source: " + report.get("source", ""))
 
     for r in report["results"]:
         kind, label = RESULT_STYLE[r["result"]]

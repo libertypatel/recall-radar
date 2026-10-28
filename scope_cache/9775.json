@@ -1,0 +1,40 @@
+{
+  "affected_models": [
+    {
+      "value": "YXB17",
+      "quote": "Model number YXB17",
+      "supported": true
+    }
+  ],
+  "dates": [
+    {
+      "type": "manufactured",
+      "as_written": "manufactured on or after August 15, 2022.",
+      "quote": "manufactured on or after August 15, 2022.",
+      "supported": true
+    },
+    {
+      "type": "sold",
+      "as_written": "Sold at: Amazon.com from January 2023 through June 2023",
+      "quote": "Sold at: Amazon.com from January 2023 through June 2023",
+      "supported": true
+    }
+  ],
+  "identification": [
+    {
+      "instruction": "The mattresses are white with a diagonal quilted surface and graphics of green and yellow trees, houses and foxes printed on them. They measure about 38 inches long by 26 inches wide by 3 inches high and have a dark blue tag hanging off the mattress with a picture of a cartoon teddy bear. The mattresses fold in half and have a large crease going down the length of the mattress in the middle where it folds. Model number YXB17 and the date of manufacture, in YYYY.MM, can be found on a tag on the edge of the mattress.",
+      "quote": "The mattresses are white with a diagonal quilted surface and graphics of green and yellow trees, houses and foxes printed on them. They measure about 38 inches long by 26 inches wide by 3 inches high and have a dark blue tag hanging off the mattress with a picture of a cartoon teddy bear. The mattresses fold in half and have a large crease going down the length of the mattress in the middle where it folds. Model number YXB17 and the date of manufacture, in YYYY.MM, can be found on a tag on the edge of the mattress.",
+      "supported": true
+    }
+  ],
+  "remedy": [
+    {
+      "text": "Stop using, destroy by cutting in half, email photos to recallguof@outlook.com for a full refund.",
+      "quote": "Consumers should immediately stop using and destroy the mattresses by cutting them in half and contact Beyond Baby recallguof@outlook.com to send photos of destroyed recalled products for a full refund. Beyond Baby and Amazon are contacting all purchasers directly.",
+      "supported": true
+    }
+  ],
+  "recall_id": 9775,
+  "title": "Vibe Bear Playyard Mattresses Recalled Due to Suffocation Hazards for Infants; Violation of the Federal Safety Regulation for Crib Mattresses; Sold Exclusively on Amazon.com by Beyond Baby (Recall Alert)",
+  "url": "https://www.cpsc.gov/Recalls/2024/Vibe-Bear-Playyard-Mattresses-Recalled-Due-to-Suffocation-Hazards-for-Infants-Violation-of-the-Federal-Safety-Regulation-for-Crib-Mattresses-Sold-Exclusively-on-Amazon-com-by-Beyond-Baby-Recall-Alert"
+}

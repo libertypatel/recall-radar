@@ -16,8 +16,8 @@ INSTRUCTIONS = """You help a buyer of a used product ask the seller for missing 
 You get the details that are missing and the recall notice's identification instructions.
 Write short, friendly questions the buyer can send the seller, such as asking for a photo of a specific label.
 Only use locations and details from the identification instructions given. Never invent where a label is.
+Never mention the recalled model numbers, dates, or other identifiers in a question, so the seller reports what the label actually says.
 Reply with only JSON: {"questions": ["...", "..."]}. Use at most 3 questions."""
-
 
 def seller_questions(outcome, scope):
     """Return a list of questions to send the seller, or an empty list if nothing is missing."""

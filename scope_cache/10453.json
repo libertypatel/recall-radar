@@ -1,0 +1,34 @@
+{
+  "affected_models": [
+    {
+      "value": "Modera \"Pack N Play\" Play Yard Mattress",
+      "quote": "Modera \"Pack N Play\" Play Yard Mattress",
+      "supported": true
+    }
+  ],
+  "dates": [
+    {
+      "type": "sold",
+      "as_written": "April 2024 through June 2025",
+      "quote": "April 2024 through June 2025",
+      "supported": true
+    }
+  ],
+  "identification": [
+    {
+      "instruction": "Check for white, pink, blue, or gray color, 'Modera baby' label, dual-sided infant/toddler labeling, and dimensions 38 inches long, 26 inches wide, 1.5 inches thick.",
+      "quote": "The mattresses were sold in white, pink, blue, and gray, and have 'Modera baby' printed on labels attached to the mattress. The mattresses are dual-sided, with one side labeled 'infant' and the other side labeled 'toddler.' The dimensions of the mattress are 38 inches long, 26 inches wide and 1.5 inches thick.",
+      "supported": true
+    }
+  ],
+  "remedy": [
+    {
+      "text": "Stop using the mattress, contact Modera for a full refund, cut the mattress in half, and send a photo of the destroyed mattress in the waste bin to recall@moderababy.com.",
+      "quote": "Consumers should immediately stop using the recalled mattresses and contact Modera for a full refund. Consumers should cut the mattresses in half and send a photo of the destroyed mattress in the waste bin to recall@moderababy.com to receive a full refund.",
+      "supported": true
+    }
+  ],
+  "recall_id": 10453,
+  "title": "Modera Recalls Modera Pack N Play Mattresses Due to Risk of Serious Injury or Death from Entrapment; Violates Mandatory Standard for Crib Mattresses",
+  "url": "https://www.cpsc.gov/Recalls/2026/Modera-Recalls-Modera-Pack-N-Play-Mattresses-Due-to-Risk-of-Serious-Injury-or-Death-from-Entrapment-Violates-Mandatory-Standard-for-Crib-Mattresses"
+}

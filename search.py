@@ -11,6 +11,7 @@ HEADERS = {
 }
 SEARCH_CACHE_DIR = "search_cache"
 CACHE_HOURS = 24
+SNAPSHOT_PATH = "recalls_snapshot.json"
 
 
 class SourceUnavailable(Exception):
@@ -69,18 +70,13 @@ def recall_text(recall):
 
 
 def search_recalls(details, max_results=5):
-    """Search CPSC using extracted listing details and return the best-matching recalls."""
+    SNAPSHOT_PATH = "recalls_snapshot.json"
+
+
+def rank(found, details, max_results):
+    """Score recalls: brand match counts most, then each product word. Return the top matches."""
     brand = details.get("brand")
     product_type = details.get("product_type")
-
-    found = {}
-    if brand:
-        for recall in cpsc_query(Title=brand):
-            found[recall["RecallID"]] = recall
-    if product_type:
-        for recall in cpsc_query(ProductName=product_type):
-            found[recall["RecallID"]] = recall
-
     scored = []
     for recall in found.values():
         text = recall_text(recall)
@@ -92,13 +88,46 @@ def search_recalls(details, max_results=5):
                 if word in text:
                     score += 1
         scored.append((score, recall))
-
     scored.sort(key=lambda pair: pair[0], reverse=True)
     return [recall for score, recall in scored[:max_results] if score > 0]
 
 
+def search_live(details, max_results=5):
+    """Search the live CPSC database by brand and product type."""
+    found = {}
+    if details.get("brand"):
+        for recall in cpsc_query(Title=details["brand"]):
+            found[recall["RecallID"]] = recall
+    if details.get("product_type"):
+        for recall in cpsc_query(ProductName=details["product_type"]):
+            found[recall["RecallID"]] = recall
+    return rank(found, details, max_results)
+
+
+def search_snapshot(details, max_results=5):
+    """Search the saved copy of CPSC recalls. Returns (matches, date the copy was saved)."""
+    with open(SNAPSHOT_PATH) as f:
+        snapshot = json.load(f)
+    found = {recall["RecallID"]: recall for recall in snapshot["recalls"]}
+    return rank(found, details, max_results), snapshot["saved_on"]
+
+
+def search_recalls(details, max_results=5):
+    """Try live CPSC first, then fall back to the saved copy. Returns (candidates, source note)."""
+    try:
+        return search_live(details, max_results), "Live CPSC recall database"
+    except SourceUnavailable:
+        if not os.path.exists(SNAPSHOT_PATH):
+            raise
+        candidates, saved_on = search_snapshot(details, max_results)
+        note = (f"Live CPSC search was unavailable, so this check used a saved copy of "
+                f"CPSC recalls from 2020 onward, saved on {saved_on}.")
+        return candidates, note
+
+
 if __name__ == "__main__":
-    candidates = search_recalls({"brand": "Voomf", "product_type": "crib mattress"})
+    candidates, source = search_recalls({"brand": "Voomf", "product_type": "crib mattress"})
+    print("Source:", source)
     print("Candidates found:", len(candidates))
     for recall in candidates:
         print("-", recall.get("Title"))

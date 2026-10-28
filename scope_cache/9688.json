@@ -1,0 +1,52 @@
+{
+  "affected_models": [
+    {
+      "value": "Model no. 847564",
+      "quote": "Model no. 847564",
+      "supported": true
+    },
+    {
+      "value": "Model No. 925869",
+      "quote": "Model No. 925869",
+      "supported": true
+    }
+  ],
+  "dates": [],
+  "identification": [
+    {
+      "instruction": "Check length and width",
+      "quote": "52 inches long and 28 inches wide",
+      "supported": true
+    },
+    {
+      "instruction": "Look for white top and gray sides",
+      "quote": "have a white top and gray sides",
+      "supported": true
+    },
+    {
+      "instruction": "Look for 'Room & Board' embroidered on one end",
+      "quote": "'Room & Board' embroidered on one end",
+      "supported": true
+    },
+    {
+      "instruction": "Check model name underneath embroidery",
+      "quote": "with the model name underneath",
+      "supported": true
+    }
+  ],
+  "remedy": [
+    {
+      "text": "Stop using the crib mattress and contact Room & Board for a full refund.",
+      "quote": "Consumers should immediately stop using the crib mattresses and contact Room & Board to receive a full refund.",
+      "supported": true
+    },
+    {
+      "text": "Restwell Mattress Co. and Room & Board will contact purchasers and arrange free pickup.",
+      "quote": "Restwell Mattress Co. and Room & Board are contacting all purchasers directly and will arrange for pick up at no charge.",
+      "supported": true
+    }
+  ],
+  "recall_id": 9688,
+  "title": "Restwell Mattress Recalls Room & Board Crib Mattresses Due to Suffocation Hazard for Infants; Failure to Comply with Federal Safety Standard for Crib Mattresses; Sold Exclusively at Room & Board (Recall Alert)",
+  "url": "https://www.cpsc.gov/Recalls/2023/Restwell-Mattress-Recalls-Room-Board-Crib-Mattresses-Due-to-Suffocation-Hazard-for-Infants-Failure-to-Comply-with-Federal-Safety-Standard-for-Crib-Mattresses-Sold-Exclusively-at-Room-Board-Recall-Alert"
+}

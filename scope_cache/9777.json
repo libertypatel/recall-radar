@@ -1,0 +1,60 @@
+{
+  "affected_models": [
+    {
+      "value": "YX-04",
+      "quote": "model number YX-04.",
+      "supported": true
+    }
+  ],
+  "dates": [
+    {
+      "type": "manufactured",
+      "as_written": "August 15, 2022",
+      "quote": "August 15, 2022",
+      "supported": true
+    },
+    {
+      "type": "sold",
+      "as_written": "February 2023 through June 2023",
+      "quote": "February 2023 through June 2023",
+      "supported": true
+    }
+  ],
+  "identification": [
+    {
+      "instruction": "Check for a tag on the edge of the mattress for the date of manufacture.",
+      "quote": "The date of manufacture can be found on a tag on the edge of the mattress.",
+      "supported": true
+    },
+    {
+      "instruction": "Look for a small dark blue tag with a cartoon teddy bear holding a ball.",
+      "quote": "There is also a small dark blue tag on the mattress with a cartoon teddy bear holding a ball.",
+      "supported": true
+    },
+    {
+      "instruction": "Verify the date of manufacture is in the format YYYY.MM.",
+      "quote": "The date of manufacture is in the format 'YYYY.MM' representing year and month.",
+      "supported": true
+    },
+    {
+      "instruction": "Confirm the mattress measures 38 inches long and 26 inches wide.",
+      "quote": "The crib mattresses are 38 inches long and 26 inches wide.",
+      "supported": true
+    },
+    {
+      "instruction": "Check that the top and bottom are light blue with white triangles printed.",
+      "quote": "The top and bottom of the pack and play mattresses are light blue with white triangles printed on it.",
+      "supported": true
+    }
+  ],
+  "remedy": [
+    {
+      "text": "Stop using, destroy the mattress by cutting it in half, and contact DODO Baby House with photos for a full refund.",
+      "quote": "Consumers should immediately stop using and destroy the pack and play mattresses by cutting them in half, then contact DODO Baby House to send photos of destroyed recalled products for a full refund.",
+      "supported": true
+    }
+  ],
+  "recall_id": 9777,
+  "title": "Pack and Play Mattresses Recalled Due to Suffocation Hazard for Infants; Violations to the Federal Safety Regulation for Crib Mattresses; Sold Exclusively on Amazon.com by DODO Baby House (Recall Alert)",
+  "url": "https://www.cpsc.gov/Recalls/2024/Pack-and-Play-Mattresses-Recalled-Due-to-Suffocation-Hazard-for-Infants-Violations-to-the-Federal-Safety-Regulation-for-Crib-Mattresses-Sold-Exclusively-on-Amazon-com-by-DODO-Baby-House-Recall-Alert"
+}
