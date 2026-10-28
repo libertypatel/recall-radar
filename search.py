@@ -70,7 +70,13 @@ def recall_text(recall):
 
 
 def search_recalls(details, max_results=5):
-    SNAPSHOT_PATH = "recalls_snapshot.json"
+    """Search the saved CPSC copy first (fast and reliable). Use live CPSC only if no copy exists."""
+    if os.path.exists(SNAPSHOT_PATH):
+        candidates, saved_on = search_snapshot(details, max_results)
+        note = (f"Saved copy of CPSC recall notices from 2020 through {saved_on}. "
+                f"Recalls announced after that date are not included.")
+        return candidates, note
+    return search_live(details, max_results), "Live CPSC recall database"
 
 
 def rank(found, details, max_results):
