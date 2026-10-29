@@ -1,3 +1,4 @@
+from websearch import recall_web_sources
 from matcher import clean_model
 from extract import extract_listing
 from search import search_recalls, SourceUnavailable
@@ -41,6 +42,9 @@ def check_details(details):
         if outcome["result"] == "info_needed" and question_sets < MAX_QUESTION_SETS:
             outcome["questions"] = seller_questions(outcome, scope)
             question_sets += 1
+        outcome["web_sources"] = []
+        if outcome["result"] != "outside_scope":
+            outcome["web_sources"] = recall_web_sources(scope)    
         outcome["scope"] = scope
         results.append(outcome)
     return {"details": details, "summary": summarize(results), "results": results, "source": source}

@@ -33,6 +33,13 @@ def show_report(report):
                 st.markdown("**Ask the seller:**")
                 for q in r["questions"]:
                     st.code(q, language=None, wrap_lines=True)
+            if r.get("web_sources"):
+                with st.expander("More sources found by Tavily web search"):
+                    st.caption("Context only. These do not change the result above.")
+                    for s in r["web_sources"]:
+                        st.markdown(f"**[{s['title']}]({s['url']})**")
+                        clean = " ".join(s["snippet"].replace("#", " ").split())
+                        st.caption(clean[:250] + "...")
             with st.expander("Evidence from the recall notice"):
                 for key in ["affected_models", "dates", "identification", "remedy"]:
                     for item in r["scope"].get(key, []):
