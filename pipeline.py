@@ -53,10 +53,11 @@ FIELDS = ["brand", "product_type", "model_number", "manufacture_date"]
 
 
 def same_value(field, a, b):
-    """Compare two values loosely: model numbers ignore dashes/spaces/case, others ignore case."""
+    """Model numbers must match exactly. Other fields match if one contains the other."""
     if field == "model_number":
         return clean_model(a) == clean_model(b)
-    return str(a).strip().lower() == str(b).strip().lower()
+    a, b = str(a).strip().lower(), str(b).strip().lower()
+    return a in b or b in a
 
 
 def merge_details(details, reply_details):
